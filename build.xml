@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="TestAntUse" default="compile" basedir=".">
+    <target name="clean">
+        <delete dir="build"/>
+    </target>
+    <target name="compile" depends="clean">
+        <mkdir dir="build/classes"/>
+        <mkdir dir="build/jars"/>
+        <javac srcdir="src" destdir="build/classes"/>
+    </target>
+    <target name="run" depends="compile">
+        <java classname="main.AntMain">
+            <classpath>
+                <pathelement path="build/classes"/>
+            </classpath>
+        </java>
+    </target>
+    <target name="jar" depends="compile">
+        <jar destfile="build/jars/testant.jar" basedir="build/classes">
+            <manifest>
+                <attribute name="Main-class" value="TestAnt"/>
+            </manifest>
+        </jar>
+    </target>
+</project>
