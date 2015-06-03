@@ -11,6 +11,8 @@ public class AntMain {
 		System.out.println("master");
 		
 		System.out.println("test");
+		
+		System.out.println("test-1-try to commit first");
 
 	}
 
