@@ -13,6 +13,9 @@ public class AntMain {
 		System.out.println("test");
 		
 		System.out.println("test-1-try to commit first");
+		
+		
+		System.out.println("Code updated from remote by other workers.");
 
 	}
 
